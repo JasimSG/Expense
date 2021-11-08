@@ -33,7 +33,7 @@ class App extends Component {
         balance: newAmount
       });
 
-      transactionList.push({ transaction: amount, date: currentDate, type: 'Add' })
+      transactionList.push({ transaction: amount, date: currentDate, type: 'credit' })
 
     } else {
       this.setState({
@@ -62,7 +62,7 @@ class App extends Component {
       this.setState({
         balance: newAmount
       });
-      transactionList.push({ transaction: amount, date: currentDate, type: 'Remove' })
+      transactionList.push({ transaction: amount, date: currentDate, type: 'debit' })
     } else {
       this.setState({
         errorMessage: 'Please Enter Amount'
@@ -86,7 +86,7 @@ class App extends Component {
 
           <Jumbotron className="mt-5 w-100">
 
-            <h4 className="d-flex justify-content-center">  Expense Tracker - Basic</h4>
+            <h4 className="d-flex justify-content-center">  Amount Expense Tracker - Basic</h4>
             <form>
               <Row className="w-100 ">
                 <Row className="w-100  justify-content-center">
